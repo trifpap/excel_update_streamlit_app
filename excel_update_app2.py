@@ -1,5 +1,7 @@
 import streamlit as st
 import pandas as pd
+import glob
+import os
 
 st.title ('Excel Update App - Ενημέρωση υφιστάμενου αρχείου csv : data/users.csv & δημιουργία νέου αρχείου csv : data/users_new.csv')
 
@@ -30,6 +32,12 @@ if add_data:
    df.to_csv('data/users.csv', index=False)
    st.header('New file : /data/users_new.csv has been created.')
    df.to_csv('data/users_new.csv', index=False)
+
+
+
+cwd = os.getcwd()
+st.markdown('Directory :')
+cwd
    
 
 
