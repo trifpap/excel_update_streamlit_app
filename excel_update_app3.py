@@ -10,7 +10,7 @@ st.header('Existing File : data/users.csv')
 st.write(df)
 
 st.sidebar.header('Options')
-options_form = st.sidebar.form('options_form')
+options_form = st.sidebar.form('options_form', clear_on_submit=True)
 user_email = options_form.text_input('email') 
 user_name = options_form.text_input('username')
 user_real_name = options_form.text_input('name')
